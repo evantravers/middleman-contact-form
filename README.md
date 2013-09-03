@@ -17,4 +17,5 @@ On your static site, build a form where the action is the url of your newly crea
 
 TODO: 
 
+- test framework
 - write a little errors library in js to include in the static site, all ajaxy like

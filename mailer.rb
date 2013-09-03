@@ -19,5 +19,9 @@ get '/' do
 end
 
 put '/' do
-  'how did you do that you stinker?'
+  email = ""
+  params.each do |value|
+    email += "#{value}: #{params[value]}\n"
+  end
+  Pony.mail(:to => ENV['email_recipients'], :from => 'noreply@evantravers.com', :subject => 'New Contact Form', :body => email)
 end

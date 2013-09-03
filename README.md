@@ -11,6 +11,12 @@ Then, you should go ahead and get sendgrid starter established. This will go ahe
 
 `heroku addons:add sendgrid:starter`
 
+While you have heroku open, go ahead and set up the following:
+
+```
+heroku config:set email_recipients="demo@password.com"
+```
+
 On your static site, build a form where the action is the url of your newly created heroku application:
 
 `<form action="https://website-contact.herokuapp.com/" "method="post">`

@@ -1,7 +1,7 @@
-task :default
+task :default do
   ENV['RACK_ENV'] = 'test'
 
-  require './mailer'
+  require_relative 'mailer'
   require 'test/unit'
   require 'rack/test'
 
@@ -18,3 +18,4 @@ task :default
       assert_equal 'you have reached the test!', last_response.body
     end
   end
+end

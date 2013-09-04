@@ -15,7 +15,7 @@ class MyTest < MiniTest::Unit::TestCase
   end
 
   def test_puts
-    put '/'
+    post '/'
     assert last_response.ok?
     assert_equal "how did you do that you stinker?", last_response.body
   end

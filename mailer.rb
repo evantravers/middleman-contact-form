@@ -1,11 +1,6 @@
 require 'sinatra'
 require 'pony'
 
-# This before filter is to address Cross-origin resource sharing (CORS) issue with Ajax submission of contect form.
-# Solutions was found here: http://stackoverflow.com/questions/17027117/jquery-ajax-request-to-sinatra-app-blocked-by-cors
-# Before filters are evaluated before each request within the context of the request and can modify the request and response.
-# Context for before filters in sinatra: http://www.sinatrarb.com/intro?name=filters#Filters
-
 before do
     headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
     headers['Access-Control-Allow-Origin']  = '*'

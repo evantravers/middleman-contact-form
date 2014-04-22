@@ -32,5 +32,10 @@ post '/' do
     email += "#{value[0]}: #{value[1]}\n"
   end
   puts email
-  Pony.mail(:to => ENV['email_recipients'], :from => 'noreply@example.com', :subject => 'New Contact Form', :body => email)
+  Pony.mail(
+    :to => ENV['email_recipients'],
+    :from => 'noreply@example.com',
+    :subject => 'New Contact Form',
+    :body => email
+  )
 end

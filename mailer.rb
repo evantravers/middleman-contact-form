@@ -7,7 +7,10 @@ before do
     headers['Access-Control-Allow-Headers'] = 'accept, authorization, origin'
 end
 
-set :protection, :origin_whitelist => [ENV['white_site']]
+# whitelist should be a space separated list of URLs
+whitelist = ENV['whitelist'].split
+
+set :protection, :origin_whitelist => whitelist
 
 Pony.options = {
   :via => :smtp,

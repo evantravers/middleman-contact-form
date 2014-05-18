@@ -17,8 +17,11 @@ While you have heroku open, go ahead and set up the following:
 
 ```
 heroku config:set email_recipients="demo@password.com"
-heroku config:set white_site="http://www.yourstaticsite.com/"
+heroku config:set whitelist="http://www.yourstaticsite.com/"
 ```
+
+If you want to send from multiple sites, or you have multiple domains, set the
+whitelist string to be a comma separated list of URLs.
 
 On your static site, build a form where the action is the url of your newly
 created heroku application:
